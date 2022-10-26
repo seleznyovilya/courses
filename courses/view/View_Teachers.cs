@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace courses
 {
-    public partial class TeachersView : Form
+    public partial class View_Teachers : Form
     {
         Teacher teacher = new Teacher();
-        Database db = new Database();
-        public TeachersView()
+        Model db = new Model();
+        public View_Teachers()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace courses
             teacher.gender = cbGender.Text;
 
             var success = db.AddTeacher(teacher);
-            dataGridView1.DataSource = db.GetAllTeacher();
+            tvTeachers.DataSource = db.GetAllTeacher();
             if (success)
             {
                 MessageBox.Show("Success");
@@ -44,24 +44,24 @@ namespace courses
 
         private void TeachersView_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = db.GetAllTeacher();
+            tvTeachers.DataSource = db.GetAllTeacher();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView1.CurrentRow.Selected = true;
-            tbFIO.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            dtpBithday.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            tbCategory.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            tbEducation.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            cbGender.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            tvTeachers.CurrentRow.Selected = true;
+            tbFIO.Text = tvTeachers.Rows[e.RowIndex].Cells[1].Value.ToString();
+            dtpBithday.Text = tvTeachers.Rows[e.RowIndex].Cells[2].Value.ToString();
+            tbCategory.Text = tvTeachers.Rows[e.RowIndex].Cells[5].Value.ToString();
+            tbEducation.Text = tvTeachers.Rows[e.RowIndex].Cells[4].Value.ToString();
+            cbGender.Text = tvTeachers.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            teacher.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            teacher.id = Convert.ToInt32(tvTeachers.CurrentRow.Cells[0].Value.ToString());
             var success = db.DeleteTeacher(teacher);
-            dataGridView1.DataSource = db.GetAllTeacher();
+            tvTeachers.DataSource = db.GetAllTeacher();
             if (success)
             {
                 MessageBox.Show("Преподаватель удален");

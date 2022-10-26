@@ -1,6 +1,6 @@
 ﻿namespace courses
 {
-    partial class ApplicationView
+    partial class View_Application
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tvApplication = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.bAdd = new System.Windows.Forms.Button();
-            this.bDel = new System.Windows.Forms.Button();
+            this.bNew = new System.Windows.Forms.Button();
+            this.bDelete = new System.Windows.Forms.Button();
             this.tbNameOrg = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbAddressOrg = new System.Windows.Forms.TextBox();
@@ -50,7 +50,8 @@
             this.lvStuff = new System.Windows.Forms.ListView();
             this.tbDolzh = new System.Windows.Forms.TextBox();
             this.tbFIO = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.bUpdate = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.tvApplication)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,13 +64,13 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(122, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
-            // dataGridView1
+            // tvApplication
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(273, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1197, 546);
-            this.dataGridView1.TabIndex = 6;
+            this.tvApplication.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tvApplication.Location = new System.Drawing.Point(273, 12);
+            this.tvApplication.Name = "tvApplication";
+            this.tvApplication.Size = new System.Drawing.Size(1197, 546);
+            this.tvApplication.TabIndex = 6;
             // 
             // label1
             // 
@@ -98,24 +99,24 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Желаемая дата \r\nначала обучения";
             // 
-            // bAdd
+            // bNew
             // 
-            this.bAdd.Location = new System.Drawing.Point(12, 477);
-            this.bAdd.Name = "bAdd";
-            this.bAdd.Size = new System.Drawing.Size(255, 37);
-            this.bAdd.TabIndex = 12;
-            this.bAdd.Text = "Оформить";
-            this.bAdd.UseVisualStyleBackColor = true;
-            this.bAdd.Click += new System.EventHandler(this.bAdd_Click);
+            this.bNew.Location = new System.Drawing.Point(12, 477);
+            this.bNew.Name = "bNew";
+            this.bNew.Size = new System.Drawing.Size(255, 23);
+            this.bNew.TabIndex = 12;
+            this.bNew.Text = "Оформить";
+            this.bNew.UseVisualStyleBackColor = true;
+            this.bNew.Click += new System.EventHandler(this.bAdd_Click);
             // 
-            // bDel
+            // bDelete
             // 
-            this.bDel.Location = new System.Drawing.Point(12, 520);
-            this.bDel.Name = "bDel";
-            this.bDel.Size = new System.Drawing.Size(255, 38);
-            this.bDel.TabIndex = 13;
-            this.bDel.Text = "Удалить";
-            this.bDel.UseVisualStyleBackColor = true;
+            this.bDelete.Location = new System.Drawing.Point(12, 532);
+            this.bDelete.Name = "bDelete";
+            this.bDelete.Size = new System.Drawing.Size(255, 26);
+            this.bDelete.TabIndex = 13;
+            this.bDelete.Text = "Удалить";
+            this.bDelete.UseVisualStyleBackColor = true;
             // 
             // tbNameOrg
             // 
@@ -248,11 +249,21 @@
             this.tbFIO.Size = new System.Drawing.Size(243, 20);
             this.tbFIO.TabIndex = 18;
             // 
-            // ApplicationView
+            // bUpdate
+            // 
+            this.bUpdate.Location = new System.Drawing.Point(12, 505);
+            this.bUpdate.Name = "bUpdate";
+            this.bUpdate.Size = new System.Drawing.Size(255, 23);
+            this.bUpdate.TabIndex = 23;
+            this.bUpdate.Text = "Изменить";
+            this.bUpdate.UseVisualStyleBackColor = true;
+            // 
+            // View_Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1482, 572);
+            this.Controls.Add(this.bUpdate);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cbCourse);
             this.Controls.Add(this.tbEmail);
@@ -262,17 +273,17 @@
             this.Controls.Add(this.tbAddressOrg);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbNameOrg);
-            this.Controls.Add(this.bDel);
-            this.Controls.Add(this.bAdd);
+            this.Controls.Add(this.bDelete);
+            this.Controls.Add(this.bNew);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tvApplication);
             this.Controls.Add(this.dateTimePicker1);
-            this.Name = "ApplicationView";
+            this.Name = "View_Application";
             this.Text = "Прием заявки на обучение";
             this.Load += new System.EventHandler(this.SendApplicationView_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tvApplication)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -282,12 +293,12 @@
 
         #endregion
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tvApplication;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button bAdd;
-        private System.Windows.Forms.Button bDel;
+        private System.Windows.Forms.Button bNew;
+        private System.Windows.Forms.Button bDelete;
         private System.Windows.Forms.TextBox tbNameOrg;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbAddressOrg;
@@ -303,5 +314,6 @@
         private System.Windows.Forms.ListView lvStuff;
         private System.Windows.Forms.TextBox tbDolzh;
         private System.Windows.Forms.TextBox tbFIO;
+        private System.Windows.Forms.Button bUpdate;
     }
 }

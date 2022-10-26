@@ -1,6 +1,6 @@
 ﻿namespace courses
 {
-    partial class AdminView
+    partial class View_Users
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvUsers = new System.Windows.Forms.DataGridView();
+            this.tvUsers = new System.Windows.Forms.DataGridView();
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.lLogin = new System.Windows.Forms.Label();
@@ -36,17 +36,17 @@
             this.btnAddUser = new System.Windows.Forms.Button();
             this.bEdit = new System.Windows.Forms.Button();
             this.bDel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tvUsers)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvUsers
+            // tvUsers
             // 
-            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(139, 43);
-            this.dgvUsers.Name = "dgvUsers";
-            this.dgvUsers.Size = new System.Drawing.Size(488, 402);
-            this.dgvUsers.TabIndex = 0;
-            this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
+            this.tvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tvUsers.Location = new System.Drawing.Point(139, 43);
+            this.tvUsers.Name = "tvUsers";
+            this.tvUsers.Size = new System.Drawing.Size(488, 402);
+            this.tvUsers.TabIndex = 0;
+            this.tvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
             // 
             // tbLogin
             // 
@@ -112,7 +112,7 @@
             this.bDel.UseVisualStyleBackColor = true;
             this.bDel.Click += new System.EventHandler(this.bDel_Click);
             // 
-            // AdminView
+            // View_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,11 +124,11 @@
             this.Controls.Add(this.lLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbLogin);
-            this.Controls.Add(this.dgvUsers);
-            this.Name = "AdminView";
+            this.Controls.Add(this.tvUsers);
+            this.Name = "View_Users";
             this.Text = "Рабочее место администратора системы";
             this.Load += new System.EventHandler(this.AdminView_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tvUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,7 +136,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvUsers;
+        private System.Windows.Forms.DataGridView tvUsers;
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label lLogin;

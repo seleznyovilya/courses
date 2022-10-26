@@ -15,7 +15,7 @@ namespace courses
     public partial class LoginView : Form
     {
         Users user = new Users();
-        Database db = new Database();
+        Model db = new Model();
         public LoginView()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace courses
 
             if (login == "admin" & password == "admin")
             {
-                AdminView usersView = new AdminView();
+                View_Users usersView = new View_Users();
                 usersView.Show();
             }
             int k = 0;

@@ -1,6 +1,6 @@
 ﻿namespace courses
 {
-    partial class ConsolidationView
+    partial class View_Consolidation
     {
         /// <summary>
         /// Required designer variable.
@@ -37,8 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tvConsolidation = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.tvConsolidation)).BeginInit();
             this.SuspendLayout();
             // 
             // cbTeacher
@@ -122,20 +122,20 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Дата окончания";
             // 
-            // dataGridView1
+            // tvConsolidation
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(171, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(640, 379);
-            this.dataGridView1.TabIndex = 10;
+            this.tvConsolidation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tvConsolidation.Location = new System.Drawing.Point(171, 23);
+            this.tvConsolidation.Name = "tvConsolidation";
+            this.tvConsolidation.Size = new System.Drawing.Size(640, 379);
+            this.tvConsolidation.TabIndex = 10;
             // 
-            // ConsolidationView
+            // View_Consolidation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(823, 421);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tvConsolidation);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -145,10 +145,10 @@
             this.Controls.Add(this.dBegin);
             this.Controls.Add(this.cbCourse);
             this.Controls.Add(this.cbTeacher);
-            this.Name = "ConsolidationView";
+            this.Name = "View_Consolidation";
             this.Text = "Прикрепление преподавателей к Курсам";
             this.Load += new System.EventHandler(this.ConsolidationView_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tvConsolidation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,6 +165,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tvConsolidation;
     }
 }

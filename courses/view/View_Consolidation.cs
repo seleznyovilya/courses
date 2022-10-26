@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace courses
 {
-    public partial class ConsolidationView : Form
+    public partial class View_Consolidation : Form
     {
-        Database db = new Database();
+        Model db = new Model();
         Consolidation consolidation = new Consolidation();
-        public ConsolidationView()
+        public View_Consolidation()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace courses
 
             var success = db.AddConsolidation(consolidation);
 
-            dataGridView1.DataSource = db.GetAllConsolidation();
+            tvConsolidation.DataSource = db.GetAllConsolidation();
 
             if (success)
             {
@@ -51,7 +51,7 @@ namespace courses
             cbTeacher.DataSource = db.GetAllTeacher();
             cbTeacher.DisplayMember = "fio";
             cbTeacher.ValueMember = "id";
-            dataGridView1.DataSource = db.GetAllConsolidation();
+            tvConsolidation.DataSource = db.GetAllConsolidation();
         }
     }
 }

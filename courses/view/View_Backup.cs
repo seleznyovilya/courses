@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace courses
 {
-    public partial class StaffView : Form
+    public partial class View_Backup : Form
     {
-        public StaffView()
+        public View_Backup()
         {
             InitializeComponent();
         }

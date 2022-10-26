@@ -1,6 +1,6 @@
 ﻿namespace courses
 {
-    partial class BackupView
+    partial class View_Backup
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace courses
 {
-    partial class CoursesView
+    partial class View_Courses
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tvCourses = new System.Windows.Forms.DataGridView();
             this.tbNameCourse = new System.Windows.Forms.TextBox();
             this.tbTypeCourse = new System.Windows.Forms.TextBox();
             this.tbCountStudyDays = new System.Windows.Forms.TextBox();
@@ -38,17 +38,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tvCourses)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // tvCourses
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(273, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(663, 332);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.tvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tvCourses.Location = new System.Drawing.Point(273, 13);
+            this.tvCourses.Name = "tvCourses";
+            this.tvCourses.Size = new System.Drawing.Size(663, 332);
+            this.tvCourses.TabIndex = 0;
+            this.tvCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tbNameCourse
             // 
@@ -126,7 +126,7 @@
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // CoursesView
+            // View_Courses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,11 +140,11 @@
             this.Controls.Add(this.tbCountStudyDays);
             this.Controls.Add(this.tbTypeCourse);
             this.Controls.Add(this.tbNameCourse);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "CoursesView";
+            this.Controls.Add(this.tvCourses);
+            this.Name = "View_Courses";
             this.Text = "Управление курсами Оргранизации";
             this.Load += new System.EventHandler(this.CoursesView_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tvCourses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,7 +152,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tvCourses;
         private System.Windows.Forms.TextBox tbNameCourse;
         private System.Windows.Forms.TextBox tbTypeCourse;
         private System.Windows.Forms.TextBox tbCountStudyDays;

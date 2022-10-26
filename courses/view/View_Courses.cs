@@ -12,11 +12,11 @@ namespace courses
 {
     
 
-    public partial class CoursesView : Form
+    public partial class View_Courses : Form
     {
         Course course = new Course();
-        Database db = new Database();
-        public CoursesView()
+        Model db = new Model();
+        public View_Courses()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace courses
 
         private void CoursesView_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = db.GetAllCourse();
+            tvCourses.DataSource = db.GetAllCourse();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace courses
 
             
             var success = db.AddCourse(course);
-            dataGridView1.DataSource = db.GetAllCourse();
+            tvCourses.DataSource = db.GetAllCourse();
             if (success)
             {
                 MessageBox.Show("Course has been added successfully");

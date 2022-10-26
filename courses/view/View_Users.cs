@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace courses
 {
-    public partial class AdminView : Form
+    public partial class View_Users : Form
     {
         Users user = new Users();
-        Database db = new Database();
-        public AdminView()
+        Model db = new Model();
+        public View_Users()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace courses
 
         private void AdminView_Load(object sender, EventArgs e)
         {
-            dgvUsers.DataSource = db.GetAllUsers();
+            tvUsers.DataSource = db.GetAllUsers();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace courses
             user.password = tbPassword.Text;
 
             var success = db.AddUser(user);
-            dgvUsers.DataSource = db.GetAllUsers();
+            tvUsers.DataSource = db.GetAllUsers();
             if (success)
             {
                 MessageBox.Show("Пользователь добавлен");
@@ -53,19 +53,19 @@ namespace courses
 
         private void bEdit_Click(object sender, EventArgs e)
         {
-            user.id = Convert.ToInt32(dgvUsers.CurrentRow.Cells[0].Value.ToString());
+            user.id = Convert.ToInt32(tvUsers.CurrentRow.Cells[0].Value.ToString());
             user.login = tbLogin.Text;
             user.password = tbPassword.Text;
             db.UpdateUser(user);
-            dgvUsers.DataSource = db.GetAllUsers();
+            tvUsers.DataSource = db.GetAllUsers();
 
         }
 
         private void bDel_Click(object sender, EventArgs e)
         {
-            user.id = Convert.ToInt32(dgvUsers.CurrentRow.Cells[0].Value.ToString());
+            user.id = Convert.ToInt32(tvUsers.CurrentRow.Cells[0].Value.ToString());
             var success = db.DeleteUser(user);
-            dgvUsers.DataSource = db.GetAllUsers();
+            tvUsers.DataSource = db.GetAllUsers();
             if (success)
             {
                 MessageBox.Show("Пользователь удален");

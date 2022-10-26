@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace courses
 {
-    public partial class PriceView : Form
+    public partial class View_Price : Form
     {
-        Database db = new Database();
+        Model db = new Model();
         Price price = new Price();
         
         
-        public PriceView()
+        public View_Price()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace courses
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             price.date = dateTimePicker1.Text;
             price.price = Convert.ToInt32(tbPrice.Text);
@@ -36,16 +36,10 @@ namespace courses
             course.price_VAT=course.price+((course.price/100)*20);
             db.UpdateCourse(course);
             
-            var success = db.AddPrice(price);
+            db.AddPrice(price);
 
-            dataGridView1.DataSource = db.GetAllPrice();
+            tvPrice.DataSource = db.GetAllPrice();
 
-            if (success)
-            {
-                MessageBox.Show("Course has been added successfully");
-            }
-            else
-                MessageBox.Show("Ошибка");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -58,7 +52,7 @@ namespace courses
             cbCourse.DataSource = db.GetAllCourse();
             cbCourse.DisplayMember = "name";
             cbCourse.ValueMember = "id";
-            dataGridView1.DataSource = db.GetAllPrice();
+            tvPrice.DataSource = db.GetAllPrice();
         }
     }
 }

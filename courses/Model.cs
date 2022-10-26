@@ -16,6 +16,16 @@ namespace courses
         public int id { get; set; }
         public string login { get; set; }
         public string password { get; set; }
+        public bool authorization { get; set; }
+    }
+
+    class Backup
+    {
+        public int id { get; set; }
+        public DateTime date_backup { get; set; }
+        public int size_of_backup { get; set; }
+        public Users responsible_backup { get; set; }
+
     }
 
 
@@ -41,7 +51,7 @@ namespace courses
     }
     class Price
     {
-        public int id { get; set; }
+        public int number_of_document { get; set; }
         public string date { get; set; }
         public int price { get; set; }
         public int courseid { get; set; }
@@ -70,21 +80,14 @@ namespace courses
         public int idcourse { get; set; }
 
     }
-    class Company
-    {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string address { get; set; }
-        public string tel { get; set; }
-        public string email { get; set; }
-    }
 
-    class Database
+
+    class Model
     {
         private readonly MySqlConnection _connection;
 
 
-        public Database()
+        public Model()
         {
             var builder = new MySqlConnectionStringBuilder();
 
@@ -341,7 +344,7 @@ namespace courses
                     {
                         var price = new Price
                         {
-                            id = dataReader.GetInt32(0),
+                            number_of_document = dataReader.GetInt32(0),
                             date = Convert.ToString(dataReader.GetDateTime(1)),
                             price = dataReader.GetInt32(2),
                             courseid = dataReader.GetInt32(3),

@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace courses
 {
-    public partial class ApplicationView : Form
+    public partial class View_Application : Form
     {
         Applications applications = new Applications();
-        Database db = new Database();
+        Model db = new Model();
         string stuff_fio;
         string stuff_dolzh;
-        public ApplicationView()
+        public View_Application()
         {
             InitializeComponent();
         }
 
         private void SendApplicationView_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = db.GetAllApplication();
+            tvApplication.DataSource = db.GetAllApplication();
             cbCourse.DataSource = db.GetAllCourse();
             cbCourse.DisplayMember = "name";
             cbCourse.ValueMember = "id";
@@ -51,7 +51,7 @@ namespace courses
             applications.idcourse = Convert.ToInt32(cbCourse.SelectedValue);
             var success = db.AddApplication(applications);
 
-            dataGridView1.DataSource = db.GetAllApplication();
+            tvApplication.DataSource = db.GetAllApplication();
 
             if (success)
             {

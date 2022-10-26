@@ -22,27 +22,21 @@ namespace courses
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            StaffView staff = new StaffView();
-            staff.Show();
-        }
-
         private void bCourses_Click(object sender, EventArgs e)
         {
-            CoursesView coursesView = new CoursesView();
+            View_Courses coursesView = new View_Courses();
             coursesView.Show();
         }
 
         private void btnPrice_Click(object sender, EventArgs e)
         {
-            PriceView priceView = new PriceView();
+            View_Price priceView = new View_Price();
             priceView.Show();
         }
 
         private void bTeacher_Click(object sender, EventArgs e)
         {
-            TeachersView teachersView = new TeachersView();
+            View_Teachers teachersView = new View_Teachers();
             teachersView.Show();
         }
 
@@ -50,19 +44,19 @@ namespace courses
 
         private void btnConsolidation_Click(object sender, EventArgs e)
         {
-            ConsolidationView consolidationView = new ConsolidationView();
+            View_Consolidation consolidationView = new View_Consolidation();
             consolidationView.Show();
         }
 
         private void bSentApplication_Click(object sender, EventArgs e)
         {
-            ApplicationView sendApplication = new ApplicationView();
+            View_Application sendApplication = new View_Application();
             sendApplication.Show();
         }
 
         private void bGetApplication_Click(object sender, EventArgs e)
         {
-            ApplicationView sendApplication = new ApplicationView();
+            View_Application sendApplication = new View_Application();
             sendApplication.Show();
         }
     }
