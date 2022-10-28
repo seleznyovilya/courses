@@ -33,9 +33,9 @@ namespace courses
 
         private void button1_Click(object sender, EventArgs e)
         {
-            course.name = tbNameCourse.Text;
+            course.name = LBname_of_course.Text;
             course.type = tbTypeCourse.Text;
-            course.count = Convert.ToInt32(tbCountStudyDays.Text);
+            course.count = Convert.ToInt32(LBamount_day_of_course.Text);
 
             
             var success = db.AddCourse(course);

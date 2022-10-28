@@ -26,11 +26,11 @@ namespace courses
 
         private void button1_Click(object sender, EventArgs e)
         {
-            teacher.fio = tbFIO.Text;
-            teacher.bithday = dtpBithday.Text;
-            teacher.category = tbCategory.Text;
-            teacher.education = tbEducation.Text;
-            teacher.gender = cbGender.Text;
+            teacher.fio = LBsurname_name_lastname.Text;
+            teacher.bithday = LBdate_of_bithday.Text;
+            teacher.category = LBcategory.Text;
+            teacher.education = LBeducation.Text;
+            teacher.gender = LBnuberphone.Text;
 
             var success = db.AddTeacher(teacher);
             tvTeachers.DataSource = db.GetAllTeacher();
@@ -50,11 +50,11 @@ namespace courses
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             tvTeachers.CurrentRow.Selected = true;
-            tbFIO.Text = tvTeachers.Rows[e.RowIndex].Cells[1].Value.ToString();
-            dtpBithday.Text = tvTeachers.Rows[e.RowIndex].Cells[2].Value.ToString();
-            tbCategory.Text = tvTeachers.Rows[e.RowIndex].Cells[5].Value.ToString();
-            tbEducation.Text = tvTeachers.Rows[e.RowIndex].Cells[4].Value.ToString();
-            cbGender.Text = tvTeachers.Rows[e.RowIndex].Cells[3].Value.ToString();
+            LBsurname_name_lastname.Text = tvTeachers.Rows[e.RowIndex].Cells[1].Value.ToString();
+            LBdate_of_bithday.Text = tvTeachers.Rows[e.RowIndex].Cells[2].Value.ToString();
+            LBcategory.Text = tvTeachers.Rows[e.RowIndex].Cells[5].Value.ToString();
+            LBeducation.Text = tvTeachers.Rows[e.RowIndex].Cells[4].Value.ToString();
+            LBnuberphone.Text = tvTeachers.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)

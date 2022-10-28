@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.tvCourses = new System.Windows.Forms.DataGridView();
-            this.tbNameCourse = new System.Windows.Forms.TextBox();
+            this.LBname_of_course = new System.Windows.Forms.TextBox();
             this.tbTypeCourse = new System.Windows.Forms.TextBox();
-            this.tbCountStudyDays = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.LBamount_day_of_course = new System.Windows.Forms.TextBox();
+            this.lname_of_course = new System.Windows.Forms.Label();
+            this.ltype_of_course = new System.Windows.Forms.Label();
+            this.lamount_day_of_course = new System.Windows.Forms.Label();
+            this.bNew = new System.Windows.Forms.Button();
+            this.bUpdate = new System.Windows.Forms.Button();
+            this.bDelete = new System.Windows.Forms.Button();
+            this.LBcode_of_course = new System.Windows.Forms.TextBox();
+            this.lcode_of_course = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tvCourses)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,96 +52,114 @@
             this.tvCourses.TabIndex = 0;
             this.tvCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // tbNameCourse
+            // LBname_of_course
             // 
-            this.tbNameCourse.Location = new System.Drawing.Point(31, 48);
-            this.tbNameCourse.Name = "tbNameCourse";
-            this.tbNameCourse.Size = new System.Drawing.Size(219, 20);
-            this.tbNameCourse.TabIndex = 1;
+            this.LBname_of_course.Location = new System.Drawing.Point(28, 122);
+            this.LBname_of_course.Name = "LBname_of_course";
+            this.LBname_of_course.Size = new System.Drawing.Size(219, 20);
+            this.LBname_of_course.TabIndex = 1;
             // 
             // tbTypeCourse
             // 
-            this.tbTypeCourse.Location = new System.Drawing.Point(31, 87);
+            this.tbTypeCourse.Location = new System.Drawing.Point(28, 161);
             this.tbTypeCourse.Name = "tbTypeCourse";
             this.tbTypeCourse.Size = new System.Drawing.Size(219, 20);
             this.tbTypeCourse.TabIndex = 2;
             // 
-            // tbCountStudyDays
+            // LBamount_day_of_course
             // 
-            this.tbCountStudyDays.Location = new System.Drawing.Point(31, 126);
-            this.tbCountStudyDays.Name = "tbCountStudyDays";
-            this.tbCountStudyDays.Size = new System.Drawing.Size(219, 20);
-            this.tbCountStudyDays.TabIndex = 3;
+            this.LBamount_day_of_course.Location = new System.Drawing.Point(28, 200);
+            this.LBamount_day_of_course.Name = "LBamount_day_of_course";
+            this.LBamount_day_of_course.Size = new System.Drawing.Size(219, 20);
+            this.LBamount_day_of_course.TabIndex = 3;
             // 
-            // label1
+            // lname_of_course
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Название";
+            this.lname_of_course.AutoSize = true;
+            this.lname_of_course.Location = new System.Drawing.Point(28, 106);
+            this.lname_of_course.Name = "lname_of_course";
+            this.lname_of_course.Size = new System.Drawing.Size(57, 13);
+            this.lname_of_course.TabIndex = 4;
+            this.lname_of_course.Text = "Название";
             // 
-            // label2
+            // ltype_of_course
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Тип";
+            this.ltype_of_course.AutoSize = true;
+            this.ltype_of_course.Location = new System.Drawing.Point(25, 145);
+            this.ltype_of_course.Name = "ltype_of_course";
+            this.ltype_of_course.Size = new System.Drawing.Size(26, 13);
+            this.ltype_of_course.TabIndex = 5;
+            this.ltype_of_course.Text = "Тип";
             // 
-            // label3
+            // lamount_day_of_course
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Количество дней обучения";
+            this.lamount_day_of_course.AutoSize = true;
+            this.lamount_day_of_course.Location = new System.Drawing.Point(28, 184);
+            this.lamount_day_of_course.Name = "lamount_day_of_course";
+            this.lamount_day_of_course.Size = new System.Drawing.Size(142, 13);
+            this.lamount_day_of_course.TabIndex = 6;
+            this.lamount_day_of_course.Text = "Количество дней обучения";
             // 
-            // button1
+            // bNew
             // 
-            this.button1.Location = new System.Drawing.Point(31, 248);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(219, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bNew.Location = new System.Drawing.Point(31, 248);
+            this.bNew.Name = "bNew";
+            this.bNew.Size = new System.Drawing.Size(219, 23);
+            this.bNew.TabIndex = 7;
+            this.bNew.Text = "Добавить";
+            this.bNew.UseVisualStyleBackColor = true;
+            this.bNew.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // bUpdate
             // 
-            this.button2.Location = new System.Drawing.Point(31, 277);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(219, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Изменить";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bUpdate.Location = new System.Drawing.Point(31, 277);
+            this.bUpdate.Name = "bUpdate";
+            this.bUpdate.Size = new System.Drawing.Size(219, 23);
+            this.bUpdate.TabIndex = 8;
+            this.bUpdate.Text = "Изменить";
+            this.bUpdate.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // bDelete
             // 
-            this.button3.Location = new System.Drawing.Point(31, 306);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(219, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Удалить";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bDelete.Location = new System.Drawing.Point(31, 306);
+            this.bDelete.Name = "bDelete";
+            this.bDelete.Size = new System.Drawing.Size(219, 23);
+            this.bDelete.TabIndex = 9;
+            this.bDelete.Text = "Удалить";
+            this.bDelete.UseVisualStyleBackColor = true;
+            // 
+            // LBcode_of_course
+            // 
+            this.LBcode_of_course.Location = new System.Drawing.Point(28, 83);
+            this.LBcode_of_course.Name = "LBcode_of_course";
+            this.LBcode_of_course.Size = new System.Drawing.Size(219, 20);
+            this.LBcode_of_course.TabIndex = 10;
+            // 
+            // lcode_of_course
+            // 
+            this.lcode_of_course.AutoSize = true;
+            this.lcode_of_course.Location = new System.Drawing.Point(28, 67);
+            this.lcode_of_course.Name = "lcode_of_course";
+            this.lcode_of_course.Size = new System.Drawing.Size(58, 13);
+            this.lcode_of_course.TabIndex = 11;
+            this.lcode_of_course.Text = "Код курса";
             // 
             // View_Courses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(948, 366);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbCountStudyDays);
+            this.Controls.Add(this.lcode_of_course);
+            this.Controls.Add(this.LBcode_of_course);
+            this.Controls.Add(this.bDelete);
+            this.Controls.Add(this.bUpdate);
+            this.Controls.Add(this.bNew);
+            this.Controls.Add(this.lamount_day_of_course);
+            this.Controls.Add(this.ltype_of_course);
+            this.Controls.Add(this.lname_of_course);
+            this.Controls.Add(this.LBamount_day_of_course);
             this.Controls.Add(this.tbTypeCourse);
-            this.Controls.Add(this.tbNameCourse);
+            this.Controls.Add(this.LBname_of_course);
             this.Controls.Add(this.tvCourses);
             this.Name = "View_Courses";
             this.Text = "Управление курсами Оргранизации";
@@ -153,14 +173,16 @@
         #endregion
 
         private System.Windows.Forms.DataGridView tvCourses;
-        private System.Windows.Forms.TextBox tbNameCourse;
+        private System.Windows.Forms.TextBox LBname_of_course;
         private System.Windows.Forms.TextBox tbTypeCourse;
-        private System.Windows.Forms.TextBox tbCountStudyDays;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox LBamount_day_of_course;
+        private System.Windows.Forms.Label lname_of_course;
+        private System.Windows.Forms.Label ltype_of_course;
+        private System.Windows.Forms.Label lamount_day_of_course;
+        private System.Windows.Forms.Button bNew;
+        private System.Windows.Forms.Button bUpdate;
+        private System.Windows.Forms.Button bDelete;
+        private System.Windows.Forms.TextBox LBcode_of_course;
+        private System.Windows.Forms.Label lcode_of_course;
     }
 }

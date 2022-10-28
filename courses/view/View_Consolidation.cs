@@ -25,8 +25,8 @@ namespace courses
             consolidation.start = dBegin.Text;
             consolidation.end = dEnd.Text;
            
-            consolidation.id_course = Convert.ToInt32(cbCourse.SelectedValue);
-            consolidation.id_teacher = Convert.ToInt32(cbTeacher.SelectedValue);
+            consolidation.id_course = Convert.ToInt32(LBname_of_course.SelectedValue);
+            consolidation.id_teacher = Convert.ToInt32(LBteacher.SelectedValue);
             
             
 
@@ -45,12 +45,12 @@ namespace courses
         private void ConsolidationView_Load(object sender, EventArgs e)
         {
             
-            cbCourse.DataSource = db.GetAllCourse();
-            cbCourse.DisplayMember = "name";
-            cbCourse.ValueMember = "id";
-            cbTeacher.DataSource = db.GetAllTeacher();
-            cbTeacher.DisplayMember = "fio";
-            cbTeacher.ValueMember = "id";
+            LBname_of_course.DataSource = db.GetAllCourse();
+            LBname_of_course.DisplayMember = "name";
+            LBname_of_course.ValueMember = "id";
+            LBteacher.DataSource = db.GetAllTeacher();
+            LBteacher.DisplayMember = "fio";
+            LBteacher.ValueMember = "id";
             tvConsolidation.DataSource = db.GetAllConsolidation();
         }
     }

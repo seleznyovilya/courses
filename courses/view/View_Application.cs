@@ -31,7 +31,7 @@ namespace courses
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string dolzh = tbDolzh.Text;
+            string dolzh = LBstuff_pozition.Text;
             string fop = tbFIO.Text;
             stuff_fio = stuff_fio + ","+fop;
             stuff_dolzh = stuff_dolzh + "," + dolzh;
@@ -40,7 +40,7 @@ namespace courses
 
         private void bAdd_Click(object sender, EventArgs e)
         {
-            applications.name_of_organization = tbNameOrg.Text;
+            applications.name_of_organization = LBname_of_organization.Text;
             applications.address_of_organization = tbAddressOrg.Text;
             applications.numberphone_organization = tbNumbPhoneOrg.Text;
             applications.email = tbEmail.Text;

@@ -28,10 +28,10 @@ namespace courses
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            price.date = dateTimePicker1.Text;
+            price.date = LBdate_of_document.Text;
             price.price = Convert.ToInt32(tbPrice.Text);
-            price.courseid = Convert.ToInt32(cbCourse.SelectedValue);
-            Course course = (Course)cbCourse.SelectedItem;
+            price.courseid = Convert.ToInt32(LBcourse.SelectedValue);
+            Course course = (Course)LBcourse.SelectedItem;
             course.price = price.price;
             course.price_VAT=course.price+((course.price/100)*20);
             db.UpdateCourse(course);
@@ -49,9 +49,9 @@ namespace courses
 
         private void PriceView_Load(object sender, EventArgs e)
         {
-            cbCourse.DataSource = db.GetAllCourse();
-            cbCourse.DisplayMember = "name";
-            cbCourse.ValueMember = "id";
+            LBcourse.DataSource = db.GetAllCourse();
+            LBcourse.DisplayMember = "name";
+            LBcourse.ValueMember = "id";
             tvPrice.DataSource = db.GetAllPrice();
         }
     }

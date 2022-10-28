@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.tvTeachers = new System.Windows.Forms.DataGridView();
-            this.tbFIO = new System.Windows.Forms.TextBox();
-            this.dtpBithday = new System.Windows.Forms.DateTimePicker();
-            this.tbEducation = new System.Windows.Forms.TextBox();
-            this.tbCategory = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnAddTeacher = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbGender = new System.Windows.Forms.ComboBox();
+            this.LBsurname_name_lastname = new System.Windows.Forms.TextBox();
+            this.LBdate_of_bithday = new System.Windows.Forms.DateTimePicker();
+            this.LBeducation = new System.Windows.Forms.TextBox();
+            this.LBcategory = new System.Windows.Forms.TextBox();
+            this.lsurname_name_lastname = new System.Windows.Forms.Label();
+            this.ldate_of_bithday = new System.Windows.Forms.Label();
+            this.leducation = new System.Windows.Forms.Label();
+            this.lcategory = new System.Windows.Forms.Label();
+            this.bNew = new System.Windows.Forms.Button();
+            this.bDelete = new System.Windows.Forms.Button();
+            this.lphone = new System.Windows.Forms.Label();
+            this.LBnuberphone = new System.Windows.Forms.ComboBox();
+            this.bUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tvTeachers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,130 +54,140 @@
             this.tvTeachers.TabIndex = 0;
             this.tvTeachers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // tbFIO
+            // LBsurname_name_lastname
             // 
-            this.tbFIO.Location = new System.Drawing.Point(12, 30);
-            this.tbFIO.Name = "tbFIO";
-            this.tbFIO.Size = new System.Drawing.Size(165, 20);
-            this.tbFIO.TabIndex = 1;
+            this.LBsurname_name_lastname.Location = new System.Drawing.Point(12, 30);
+            this.LBsurname_name_lastname.Name = "LBsurname_name_lastname";
+            this.LBsurname_name_lastname.Size = new System.Drawing.Size(165, 20);
+            this.LBsurname_name_lastname.TabIndex = 1;
             // 
-            // dtpBithday
+            // LBdate_of_bithday
             // 
-            this.dtpBithday.CustomFormat = "yyyy-MM-dd";
-            this.dtpBithday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBithday.Location = new System.Drawing.Point(12, 78);
-            this.dtpBithday.Name = "dtpBithday";
-            this.dtpBithday.Size = new System.Drawing.Size(165, 20);
-            this.dtpBithday.TabIndex = 2;
+            this.LBdate_of_bithday.CustomFormat = "yyyy-MM-dd";
+            this.LBdate_of_bithday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.LBdate_of_bithday.Location = new System.Drawing.Point(12, 78);
+            this.LBdate_of_bithday.Name = "LBdate_of_bithday";
+            this.LBdate_of_bithday.Size = new System.Drawing.Size(165, 20);
+            this.LBdate_of_bithday.TabIndex = 2;
             // 
-            // tbEducation
+            // LBeducation
             // 
-            this.tbEducation.Location = new System.Drawing.Point(13, 162);
-            this.tbEducation.Name = "tbEducation";
-            this.tbEducation.Size = new System.Drawing.Size(164, 20);
-            this.tbEducation.TabIndex = 4;
+            this.LBeducation.Location = new System.Drawing.Point(13, 162);
+            this.LBeducation.Name = "LBeducation";
+            this.LBeducation.Size = new System.Drawing.Size(164, 20);
+            this.LBeducation.TabIndex = 4;
             // 
-            // tbCategory
+            // LBcategory
             // 
-            this.tbCategory.Location = new System.Drawing.Point(13, 201);
-            this.tbCategory.Name = "tbCategory";
-            this.tbCategory.Size = new System.Drawing.Size(164, 20);
-            this.tbCategory.TabIndex = 5;
+            this.LBcategory.Location = new System.Drawing.Point(13, 201);
+            this.LBcategory.Name = "LBcategory";
+            this.LBcategory.Size = new System.Drawing.Size(164, 20);
+            this.LBcategory.TabIndex = 5;
             // 
-            // label1
+            // lsurname_name_lastname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "ФИО";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lsurname_name_lastname.AutoSize = true;
+            this.lsurname_name_lastname.Location = new System.Drawing.Point(12, 12);
+            this.lsurname_name_lastname.Name = "lsurname_name_lastname";
+            this.lsurname_name_lastname.Size = new System.Drawing.Size(34, 13);
+            this.lsurname_name_lastname.TabIndex = 6;
+            this.lsurname_name_lastname.Text = "ФИО";
+            this.lsurname_name_lastname.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // ldate_of_bithday
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Дата рождения";
+            this.ldate_of_bithday.AutoSize = true;
+            this.ldate_of_bithday.Location = new System.Drawing.Point(9, 62);
+            this.ldate_of_bithday.Name = "ldate_of_bithday";
+            this.ldate_of_bithday.Size = new System.Drawing.Size(86, 13);
+            this.ldate_of_bithday.TabIndex = 7;
+            this.ldate_of_bithday.Text = "Дата рождения";
             // 
-            // label4
+            // leducation
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 146);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Образование";
+            this.leducation.AutoSize = true;
+            this.leducation.Location = new System.Drawing.Point(10, 146);
+            this.leducation.Name = "leducation";
+            this.leducation.Size = new System.Drawing.Size(75, 13);
+            this.leducation.TabIndex = 9;
+            this.leducation.Text = "Образование";
             // 
-            // label5
+            // lcategory
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 185);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Категория";
+            this.lcategory.AutoSize = true;
+            this.lcategory.Location = new System.Drawing.Point(12, 185);
+            this.lcategory.Name = "lcategory";
+            this.lcategory.Size = new System.Drawing.Size(60, 13);
+            this.lcategory.TabIndex = 10;
+            this.lcategory.Text = "Категория";
             // 
-            // btnAddTeacher
+            // bNew
             // 
-            this.btnAddTeacher.Location = new System.Drawing.Point(15, 386);
-            this.btnAddTeacher.Name = "btnAddTeacher";
-            this.btnAddTeacher.Size = new System.Drawing.Size(162, 23);
-            this.btnAddTeacher.TabIndex = 11;
-            this.btnAddTeacher.Text = "Добавить";
-            this.btnAddTeacher.UseVisualStyleBackColor = true;
-            this.btnAddTeacher.Click += new System.EventHandler(this.button1_Click);
+            this.bNew.Location = new System.Drawing.Point(15, 347);
+            this.bNew.Name = "bNew";
+            this.bNew.Size = new System.Drawing.Size(162, 23);
+            this.bNew.TabIndex = 11;
+            this.bNew.Text = "Добавить";
+            this.bNew.UseVisualStyleBackColor = true;
+            this.bNew.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // bDelete
             // 
-            this.button2.Location = new System.Drawing.Point(15, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(162, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Удалить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bDelete.Location = new System.Drawing.Point(15, 402);
+            this.bDelete.Name = "bDelete";
+            this.bDelete.Size = new System.Drawing.Size(162, 23);
+            this.bDelete.TabIndex = 12;
+            this.bDelete.Text = "Удалить";
+            this.bDelete.UseVisualStyleBackColor = true;
+            this.bDelete.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label3
+            // lphone
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Пол";
+            this.lphone.AutoSize = true;
+            this.lphone.Location = new System.Drawing.Point(9, 102);
+            this.lphone.Name = "lphone";
+            this.lphone.Size = new System.Drawing.Size(27, 13);
+            this.lphone.TabIndex = 8;
+            this.lphone.Text = "Пол";
             // 
-            // cbGender
+            // LBnuberphone
             // 
-            this.cbGender.FormattingEnabled = true;
-            this.cbGender.Items.AddRange(new object[] {
+            this.LBnuberphone.FormattingEnabled = true;
+            this.LBnuberphone.Items.AddRange(new object[] {
             "Мужской",
             "Женский"});
-            this.cbGender.Location = new System.Drawing.Point(12, 118);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(165, 21);
-            this.cbGender.TabIndex = 3;
+            this.LBnuberphone.Location = new System.Drawing.Point(12, 118);
+            this.LBnuberphone.Name = "LBnuberphone";
+            this.LBnuberphone.Size = new System.Drawing.Size(165, 21);
+            this.LBnuberphone.TabIndex = 3;
+            // 
+            // bUpdate
+            // 
+            this.bUpdate.Location = new System.Drawing.Point(15, 373);
+            this.bUpdate.Name = "bUpdate";
+            this.bUpdate.Size = new System.Drawing.Size(162, 23);
+            this.bUpdate.TabIndex = 13;
+            this.bUpdate.Text = "Добавить";
+            this.bUpdate.UseVisualStyleBackColor = true;
             // 
             // View_Teachers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 447);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnAddTeacher);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbCategory);
-            this.Controls.Add(this.tbEducation);
-            this.Controls.Add(this.cbGender);
-            this.Controls.Add(this.dtpBithday);
-            this.Controls.Add(this.tbFIO);
+            this.Controls.Add(this.bUpdate);
+            this.Controls.Add(this.bDelete);
+            this.Controls.Add(this.bNew);
+            this.Controls.Add(this.lcategory);
+            this.Controls.Add(this.leducation);
+            this.Controls.Add(this.lphone);
+            this.Controls.Add(this.ldate_of_bithday);
+            this.Controls.Add(this.lsurname_name_lastname);
+            this.Controls.Add(this.LBcategory);
+            this.Controls.Add(this.LBeducation);
+            this.Controls.Add(this.LBnuberphone);
+            this.Controls.Add(this.LBdate_of_bithday);
+            this.Controls.Add(this.LBsurname_name_lastname);
             this.Controls.Add(this.tvTeachers);
             this.Name = "View_Teachers";
             this.Text = "Управление преподавателями";
@@ -190,17 +201,18 @@
         #endregion
 
         private System.Windows.Forms.DataGridView tvTeachers;
-        private System.Windows.Forms.TextBox tbFIO;
-        private System.Windows.Forms.DateTimePicker dtpBithday;
-        private System.Windows.Forms.TextBox tbEducation;
-        private System.Windows.Forms.TextBox tbCategory;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnAddTeacher;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbGender;
+        private System.Windows.Forms.TextBox LBsurname_name_lastname;
+        private System.Windows.Forms.DateTimePicker LBdate_of_bithday;
+        private System.Windows.Forms.TextBox LBeducation;
+        private System.Windows.Forms.TextBox LBcategory;
+        private System.Windows.Forms.Label lsurname_name_lastname;
+        private System.Windows.Forms.Label ldate_of_bithday;
+        private System.Windows.Forms.Label leducation;
+        private System.Windows.Forms.Label lcategory;
+        private System.Windows.Forms.Button bNew;
+        private System.Windows.Forms.Button bDelete;
+        private System.Windows.Forms.Label lphone;
+        private System.Windows.Forms.ComboBox LBnuberphone;
+        private System.Windows.Forms.Button bUpdate;
     }
 }
